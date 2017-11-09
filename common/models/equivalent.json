@@ -1,0 +1,44 @@
+{
+  "name": "Equivalent",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "text": {
+      "type": "string",
+      "required": true
+    },
+    "likes": {
+      "type": "number",
+      "required": true,
+      "default": 0
+    },
+    "dislikes": {
+      "type": "number",
+      "required": true,
+      "default": 0
+    }
+  },
+  "validations": [],
+  "relations": {
+    "domain": {
+      "type": "belongsTo",
+      "model": "Domain",
+      "foreignKey": ""
+    },
+    "phrase": {
+      "type": "belongsTo",
+      "model": "Phrase",
+      "foreignKey": ""
+    },
+    "publisher": {
+      "type": "belongsTo",
+      "model": "User",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
